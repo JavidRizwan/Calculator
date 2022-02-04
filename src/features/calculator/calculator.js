@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Element, Clear, Equal } from "./calculatorSlice";
+import { Element, Clear, Equal, Ce } from "./calculatorSlice";
 
 export function Calculator() {
   const array = useSelector((state) => state.calculator.array);
@@ -20,11 +20,18 @@ export function Calculator() {
         <div className="col col-9">
           <div className="row">
             <button
-              className="btn-danger col-8"
+              className="btn-danger col-4"
               id="clear"
               onClick={() => dispatch(Clear())}
             >
               AC
+            </button>
+            <button
+              id="ce"
+              className="col-4 btn"
+              onClick={() => dispatch(Ce())}
+            >
+              CE
             </button>
             <button
               className="btn col-4"

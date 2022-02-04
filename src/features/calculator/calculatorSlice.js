@@ -100,17 +100,31 @@ export const calculatorSlice = createSlice({
       state.array = [];
       state.result = 0;
     },
+    Ce: (state) => {
+      //clears last element
+      if (isNaN(state.array[state.array.length - 1])) {
+        state.array.pop();
+      } else {
+        let temp = state.array[state.array.length - 1];
+        state.array.pop();
+        if (temp.length > 1) {
+          state.array.push(temp.slice(0, -1));
+        }
+      }
+    },
     Equal: (state) => {
       //removes useless operators in back
       if (isNaN(state.array[state.array.length - 1])) state.array.pop();
       //calculates value and set array to empty
-      let calculate = state.array.join("");
-      state.result = eval(calculate);
-      state.array = [];
+      if (state.array.length !== 0) {
+        let calculate = state.array.join("");
+        state.result = eval(calculate);
+        state.array = [];
+      }
     },
   },
 });
 
-export const { Element, Clear, Equal } = calculatorSlice.actions;
+export const { Element, Clear, Equal, Ce } = calculatorSlice.actions;
 
 export default calculatorSlice.reducer;
