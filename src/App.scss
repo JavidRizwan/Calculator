@@ -1,0 +1,68 @@
+:root,
+#root {
+  background-color: #1d3c45;
+  color: #ffffff;
+}
+.App {
+  padding: 40px 0;
+  h1,
+  p {
+    font-weight: bolder;
+    padding: 10px;
+  }
+  h1 {
+    font-family: Copperplate, "Copperplate Gothic Light";
+  }
+}
+
+.display-box {
+  background-color: #1d3c45;
+  color: #ffffff;
+  border: solid;
+  border-width: 3px;
+  border-color: #d2601a;
+  border-radius: 8px;
+  padding: 5px;
+}
+.display {
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  text-align: left;
+  white-space: nowrap;
+  right: 0;
+}
+
+#calc {
+  background-color: #d2601a;
+  color: #ffffff;
+  padding: 20px;
+  max-width: 350px;
+  border-style: solid;
+  border-color: #fff1e1;
+  border-width: 3px;
+  border-radius: 10px;
+  .btn {
+    font-size: 25px;
+    background-color: #fff1e1;
+    height: 60px;
+    color: #1d3c45;
+    border: solid;
+    border-width: 3px;
+    border-color: #d2601a;
+    border-radius: 8px;
+  }
+  #equals {
+    background-color: #1d3c45;
+    color: #ffffff;
+    height: 120px;
+  }
+  .btn-danger {
+    font-size: 25px;
+    height: 60px;
+    border: solid;
+    border-width: 3px;
+    border-color: #d2601a;
+    border-radius: 8px;
+  }
+}
