@@ -8,7 +8,7 @@ function App() {
     <div className="App text-center">
       <h1>Calculator</h1>
       <Calculator />
-      <p>Made with 💖</p>
+      <p>Made with ❤️</p>
     </div>
   );
 }
